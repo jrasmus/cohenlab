@@ -1,0 +1,33 @@
+#!/bin/sh
+# Pre-commit: autoformat staged HTML/CSS/Markdown, then validate HTML.
+# Install once per clone:  git config core.hooksPath .githooks
+
+changed=$(git diff --cached --name-only --diff-filter=ACM)
+
+# Never commit OS junk
+if echo "$changed" | grep -q '^\.DS_Store$'; then
+  echo "✖ staged .DS_Store — unstage it: git restore --staged .DS_Store"
+  exit 1
+fi
+
+staged_html=$(echo "$changed" | grep '\.html$' || true)
+staged_fmt=$(echo "$changed" | grep -E '\.(html|css|md)$' || true)
+
+[ -z "$changed" ] && exit 0
+
+# 1. Format (re-stages in-place changes)
+if [ -n "$staged_fmt" ]; then
+  for f in $staged_fmt; do
+    npx --yes prettier@3 --write "$f" >/dev/null 2>&1 && git add "$f"
+  done
+fi
+
+# 2. Validate (blocks commit if this fails)
+if [ -n "$staged_html" ]; then
+  npx --yes html-validate@9 $staged_html >/dev/null || {
+    echo "✖ html-validate failed — run: npx html-validate@9 docs/*.html"
+    exit 1
+  }
+fi
+
+exit 0

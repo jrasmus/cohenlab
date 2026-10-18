@@ -1,170 +1,185 @@
-@font-face  {
-	font-family: 'cohenlab';
-	font-style: normal;
-	font-weight: 400;
-	font-variant: normal;
-	src: url("opensans-regular.woff");
+@font-face {
+  font-family: "cohenlab";
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  src: url("opensans-regular.woff");
 }
-@font-face  {
-	font-family: 'cohenlab';
-	font-style: normal;
-	font-weight: 700;
-	font-variant: normal;
-	src: url("opensans-bold.woff");
+@font-face {
+  font-family: "cohenlab";
+  font-style: normal;
+  font-weight: 700;
+  font-variant: normal;
+  src: url("opensans-bold.woff");
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-	font-family: cohenlab, "Helvetica Neue", Helvetica, sans-serif;
-	color: #333;
+  font-family: cohenlab, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: cohenlab, "Helvetica Neue", Helvetica, cohenlab, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cohenlab, "Helvetica Neue", Helvetica, cohenlab, sans-serif;
 }
 
 p {
-	margin-bottom: 1.2em;
+  margin-bottom: 1.2em;
 }
 a {
-	color: #0193CC;
-	text-decoration: none;
+  color: #0193cc;
+  text-decoration: none;
 }
 a:hover {
-	background-color: #EEEEF4;
+  background-color: #eeeef4;
 }
-
 
 .hidden {
-	display: none;
+  display: none;
 }
-
 
 .header {
-	background-color: #EEEEF4;
-	height: 80px;
-	margin-bottom: 20px;
-	overflow: hidden;
+  background-color: #eeeef4;
+  height: 80px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 .header h1 {
-	margin-left: 10px;
-	line-height: 80px;
-	text-shadow: 1px 0px 0px rgba(0,0,0,0.3);
+  margin-left: 10px;
+  line-height: 80px;
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.3);
 }
 .header h1 a {
-	color: #333;
+  color: #333;
 }
 
 #nav {
-	height: 80px;
-	margin: 0px auto;
-	float: right;
+  height: 80px;
+  margin: 0px auto;
+  float: right;
 }
 
 #nav ul {
-	margin: 0;
-	padding: 0px;
-	list-style: none;
-	line-height: normal;
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  line-height: normal;
 }
 
 #nav li {
-	float: left;
-	border-right: 1px solid #FFFFFF;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  float: left;
+  border-right: 1px solid #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 #nav a {
-	display: block;
-	letter-spacing: 1px;
-	line-height: 80px;
-	padding: 0px 24px;
-	text-decoration: none;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 16px;
-	font-weight: normal;
-	color: #3B3B3B;
-	border: none;
+  display: block;
+  letter-spacing: 1px;
+  line-height: 80px;
+  padding: 0px 24px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: normal;
+  color: #3b3b3b;
+  border: none;
 }
 
 #nav .current a {
-	background: #0193CC;
-	color: #FFFFFF;
+  background: #0193cc;
+  color: #ffffff;
 }
 #nav a:hover {
-	background: rgba(1, 147, 204, 0.7);
-	color: #FFFFFF;
+  background: rgba(1, 147, 204, 0.7);
+  color: #ffffff;
 }
 
 #nav .current a {
-	background: #0193CC;
+  background: #0193cc;
 }
 
 .main {
-	padding: 0 10px;
+  padding: 0 10px;
+}
+
+.main h3 {
+  clear: both;
+}
+
+.alumni-heading {
+  margin-top: 0;
+  padding-top: 2em;
+}
+
+.alumni {
+  list-style: none;
+  margin: 0.5em 0 1em;
+  padding-left: 0;
 }
 
 .content {
-	margin: 0 auto;
-	padding: 0 20px;
-	max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1000px;
 }
 
 .figure {
-	text-align: center;
-	margin-bottom: 1.2em;
+  text-align: center;
+  margin-bottom: 1.2em;
 }
 .figure .caption {
-	font-size: 0.9em;
-	color: #666;
+  font-size: 0.9em;
+  color: #666;
 }
-
 
 .person {
-	margin-bottom: 20px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	padding: 10px;
-	clear: both;
+  margin-bottom: 20px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 10px;
+  clear: both;
 }
 .person .photo {
-	float: left;
-	margin-right: 20px;
+  float: left;
+  margin-right: 20px;
 }
 .person .text {
 }
 .person .name {
-	color: #000;
-	font-weight: bold;
+  color: #000;
+  font-weight: bold;
 }
 .person .title {
-	color: #666;
-	font-size: 0.8em;
+  color: #666;
+  font-size: 0.8em;
 }
 .person .degree {
-	color: #666;
-	font-size: 0.8em;
+  color: #666;
+  font-size: 0.8em;
 }
-
 
 .pub {
-	margin: 1em 2em;
+  margin: 1em 2em;
 }
 .pub .me {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 .awards {
-    margin: 10px 0 0 40px;
+  margin: 10px 0 0 40px;
 }
 .awards li {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
-
 .blockquote {
-	font-style: italic;
+  font-style: italic;
 }
